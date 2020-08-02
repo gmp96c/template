@@ -1,6 +1,4 @@
 .cache
 node_modules
 .env
-.eslintrc.js
-.prettierrc.js
 dist
