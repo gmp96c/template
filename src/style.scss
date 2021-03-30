@@ -1,13 +1,42 @@
-body {}
-
-#root {
-  margin: 0;
-  padding: 0;
-  background: red;
-  display: grid;
-  height: 100vh;
-  width: 100vw;
-  grid-template-areas:
-    "left main right";
-  grid-template-columns: 1fr 2fr 1fr;
+body {
+    --max-width: 30rem;
+    font-size: 10px;
+    * {
+        user-select: none;
+    }
+    font-family: 'Roboto', sans-serif;
+    border-top: 1rem solid #b90000;
+    --confirm-color: #007915;
+    --confirm-color-hover: #069e2d;
+    --reject-color: ##b90000;
 }
+html,
+body {
+    height: 100%;
+    overflow-y: hidden;
+
+    overflow-x: hidden;
+}
+body {
+    position: relative;
+}
+#root {
+    margin: 0;
+    padding: 0;
+    background: #fcfcfc;
+    display: grid;
+    height: 100%;
+    width: 100vw;
+    grid-template-areas: 'left main right';
+    grid-template-columns: 1fr 2fr 1fr;
+}
+@media only screen and (max-width: 700px) {
+    #root {
+        grid-template-areas: 'main';
+        grid-template-columns: 1fr;
+    }
+}
+
+// .numKey {
+//     // grid-area: num;
+// }
